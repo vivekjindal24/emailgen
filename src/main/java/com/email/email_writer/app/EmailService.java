@@ -7,7 +7,8 @@ public class EmailService
 {
     public String generateEmailReply(EmailRequest emailRequest)
     {
-        String prompt = buildPrompt(EmailRequest);
+        //String prompt = buildPrompt(EmailRequest);
+        String prompt = buildPrompt(emailRequest);
     }
     private String buildPrompt(EmailRequest emailRequest)
     {
