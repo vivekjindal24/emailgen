@@ -1,5 +1,6 @@
 package com.email.email_writer.app;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -7,6 +8,10 @@ import java.util.Map;
 @Service
 public class EmailService
 {
+    @Value("${gemini.api.url}")
+    private String geminiApiUrl;
+    @Value("${gemini.api.key}")
+    private String geminiApiKey;
     public String generateEmailReply(EmailRequest emailRequest)
     {
         //String prompt = buildPrompt(EmailRequest);
